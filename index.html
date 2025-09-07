@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reaper Client - Best aggressive client for DDNet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -43,12 +46,12 @@
     </script>
     <style>
         body {
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 50%, rgba(138, 3, 3, 0.1) 0%, transparent 20%),
                 radial-gradient(circle at 85% 30%, rgba(138, 3, 3, 0.1) 0%, transparent 20%),
                 linear-gradient(rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.9));
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -56,12 +59,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 75% 25%, rgba(138, 3, 3, 0.2) 0%, transparent 30%),
                 radial-gradient(circle at 25% 75%, rgba(138, 3, 3, 0.2) 0%, transparent 30%);
             z-index: 0;
         }
-        
+
         .changelog-section::before {
             content: '';
             position: absolute;
@@ -69,14 +72,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 linear-gradient(90deg, transparent 49%, rgba(138, 3, 3, 0.1) 50%, transparent 51%),
                 linear-gradient(transparent 49%, rgba(138, 3, 3, 0.1) 50%, transparent 51%);
             background-size: 30px 30px;
             opacity: 0.1;
             z-index: 0;
         }
-        
+
         .btn-hover-effect:before {
             content: '';
             position: absolute;
@@ -88,11 +91,11 @@
             transition: all 0.6s ease;
             z-index: -1;
         }
-        
+
         .btn-hover-effect:hover:before {
             left: 100%;
         }
-        
+
         .nav-link:after {
             content: '';
             position: absolute;
@@ -104,11 +107,11 @@
             transition: width 0.3s ease;
             box-shadow: 0 0 8px #8A0303;
         }
-        
+
         .nav-link:hover:after {
             width: 100%;
         }
-        
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -120,8 +123,10 @@
             background: linear-gradient(90deg, transparent, #8A0303, transparent);
             box-shadow: 0 0 15px #8A0303;
         }
-        
-        .feature-item:before, .command-card:before, .download-card:before {
+
+        .feature-item:before,
+        .command-card:before,
+        .download-card:before {
             content: '';
             position: absolute;
             top: 0;
@@ -131,7 +136,7 @@
             background: linear-gradient(135deg, rgba(138, 3, 3, 0.1) 0%, transparent 70%);
             z-index: 0;
         }
-        
+
         footer:before {
             content: '';
             position: absolute;
@@ -141,7 +146,7 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, #8A0303, transparent);
         }
-        
+
         .changelog-list li:before {
             content: '▶';
             position: absolute;
@@ -154,202 +159,322 @@
         }
     </style>
 </head>
+
 <body class="font-roboto-mono bg-black text-white overflow-x-hidden">
     <!-- Навигация -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full py-6 z-50 bg-[rgba(3,3,3,0.95)] backdrop-blur-md border-b border-blood-red transition-all duration-300">
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full py-6 z-50 bg-[rgba(3,3,3,0.95)] backdrop-blur-md border-b border-blood-red transition-all duration-300">
         <div class="container mx-auto px-8 flex justify-between items-center">
-            <a href="#hero-section" class="font-cinzel text-blood-red text-2xl md:text-3xl no-underline tracking-widest flex items-center text-shadow-lg shadow-blood-red/70">
+            <a href="#hero-section"
+                class="font-cinzel text-blood-red text-2xl md:text-3xl no-underline tracking-widest flex items-center text-shadow-lg shadow-blood-red/70">
                 <i class="fas fa-skull-crossbones mr-2 text-accent-red"></i>
                 REAPER
             </a>
             <div class="flex gap-6 md:gap-10">
-                <a href="#features" class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Возможности</a>
-                <a href="#commands" class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Команды</a>
-                <a href="#changelog" class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Обновления</a>
-                <a href="#download" class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Скачать</a>
+                <a href="#features"
+                    class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Возможности</a>
+                <a href="#commands"
+                    class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Команды</a>
+                <a href="#changelog"
+                    class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Обновления</a>
+                <a href="#download"
+                    class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Скачать</a>
             </div>
         </div>
     </nav>
 
     <!-- Герой секция -->
-    <section id="hero-section" class="hero-section h-screen flex items-center justify-center text-center relative overflow-hidden">
+    <section id="hero-section"
+        class="hero-section h-screen flex items-center justify-center text-center relative overflow-hidden">
         <div class="relative z-10 max-w-4xl px-4">
-            <h1 class="hero-title font-cinzel text-blood-red text-5xl md:text-6xl lg:text-7xl mb-6 uppercase tracking-widest animate-fadeIn text-shadow-lg shadow-blood-red/70">REAPER CLIENT</h1>
-            <div class="version-badge inline-block px-6 py-2 bg-gradient-to-r from-blood-red to-accent-red text-black text-base font-bold mb-6 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/50 animate-fadeIn">Pre-Release 0.9</div>
-            <p class="hero-subtitle font-orbitron text-white text-xl md:text-2xl mb-10 font-light tracking-widest animate-fadeIn animation-delay-500">THE ABYSS GAZES BACK - Nietzsche.</p>
-            <p class="hero-description text-lg mb-14 animate-fadeIn animation-delay-1000 max-w-3xl mx-auto leading-relaxed">Когда скорости недостаточно, рождается ярость. Reaper — это не клиент. Это оружие. Перестань играть по правилам. Начни диктовать их. Твой ход.</p>
-            <a href="#download" class="btn-hover-effect inline-block px-12 py-4 bg-transparent text-blood-red border-2 border-blood-red no-underline text-lg uppercase tracking-widest transition-all duration-400 animate-fadeIn animation-delay-1500 relative overflow-hidden z-10 font-orbitron text-shadow shadow-blood-red/70 shadow-lg hover:bg-blood-red hover:text-black hover:shadow-xl hover:shadow-blood-red/70">Загрузить сейчас</a>
+            <h1
+                class="hero-title font-cinzel text-blood-red text-5xl md:text-6xl lg:text-7xl mb-6 uppercase tracking-widest animate-fadeIn text-shadow-lg shadow-blood-red/70">
+                REAPER CLIENT</h1>
+            <div
+                class="version-badge inline-block px-6 py-2 bg-gradient-to-r from-blood-red to-accent-red text-black text-base font-bold mb-6 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/50 animate-fadeIn">
+                Pre-Release 0.9</div>
+            <p
+                class="hero-subtitle font-orbitron text-white text-xl md:text-2xl mb-10 font-light tracking-widest animate-fadeIn animation-delay-500">
+                THE ABYSS GAZES BACK - Nietzsche.</p>
+            <p
+                class="hero-description text-lg mb-14 animate-fadeIn animation-delay-1000 max-w-3xl mx-auto leading-relaxed">
+                Когда скорости недостаточно, рождается ярость. Reaper — это не клиент. Это оружие. Перестань играть по
+                правилам. Начни диктовать их. Твой ход.</p>
+            <a href="#download"
+                class="btn-hover-effect inline-block px-12 py-4 bg-transparent text-blood-red border-2 border-blood-red no-underline text-lg uppercase tracking-widest transition-all duration-400 animate-fadeIn animation-delay-1500 relative overflow-hidden z-10 font-orbitron text-shadow shadow-blood-red/70 shadow-lg hover:bg-blood-red hover:text-black hover:shadow-xl hover:shadow-blood-red/70">Загрузить
+                сейчас</a>
         </div>
     </section>
 
     <!-- Функционал -->
     <section id="features" class="py-20 md:py-32">
         <div class="container mx-auto px-8">
-            <h2 class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-16 text-center uppercase tracking-wide relative pb-8">Твои Возможности</h2>
+            <h2
+                class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-16 text-center uppercase tracking-wide relative pb-8">
+                Твои Возможности</h2>
             <div class="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-user-secret"></i>
                     </div>
-                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Skin & Clan Stealer</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Присваивай идентичность жертв. Мгновенное извлечение скинов и кланов с безжалостной эффективностью.</p>
+                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Skin & Clan
+                        Stealer</h3>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Присваивай идентичность жертв.
+                        Мгновенное извлечение скинов и кланов с безжалостной эффективностью.</p>
                 </div>
-                
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Player Dump</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Полная разведка сервера. Получай всю информацию о цели: ID, имя, клан, пинг — всё для тотального доминирования.</p>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Полная разведка сервера. Получай всю
+                        информацию о цели: ID, имя, клан, пинг — всё для тотального доминирования.</p>
                 </div>
-                
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-bell"></i>
                     </div>
-                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Tile Out Notification</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Уведомления о выходе с тайла на панели быстрого доступа.</p>
+                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Tile Out
+                        Notification</h3>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Уведомления о выходе с тайла на
+                        панели быстрого доступа.</p>
                 </div>
-                
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-comment-slash"></i>
                     </div>
-                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Hide Chat Bubbles</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Активируй режим тишины. Лиши противника последней надежды — возможности увидеть, что ты печатаешь в чат.</p>
+                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Hide Chat Bubbles
+                    </h3>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Активируй режим тишины. Лиши
+                        противника последней надежды — возможности увидеть, что ты печатаешь в чат.</p>
                 </div>
-                
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-fire"></i>
                     </div>
-                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Old Star Particles</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Наслаждайтесь ретро-стилистикой с классической системой частиц во фризе.</p>
+                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Old Star Particles
+                    </h3>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Наслаждайтесь ретро-стилистикой с
+                        классической системой частиц во фризе.</p>
                 </div>
-                
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Fast Input</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Твои реакции — это закон. Технология, стирающая задержку между мыслью и действием. Ты не успеваешь за клиентом. Ты — его часть.</p>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Твои реакции — это закон. Технология,
+                        стирающая задержку между мыслью и действием. Ты не успеваешь за клиентом. Ты — его часть.</p>
                 </div>
 
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-bug"></i>
                     </div>
                     <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Mini-Debug</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Вскрой геймплей до костей. Мощные инструменты для анализа и оптимизации каждого твоего движения.</p>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Вскрой геймплей до костей. Мощные
+                        инструменты для анализа и оптимизации каждого твоего движения.</p>
                 </div>
 
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-layer-group"></i>
                     </div>
                     <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Tabbed Menu</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Интуитивная навигация по вкладкам для мгновенного доступа к любому инструменту разрушения.</p>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Интуитивная навигация по вкладкам для
+                        мгновенного доступа к любому инструменту разрушения.</p>
                 </div>
 
-                <div class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
-                    <div class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+                <div
+                    class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
                         <i class="fas fa-sliders-h"></i>
                     </div>
-                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Improved Settings</h3>
-                    <p class="relative z-10 text-white font-light leading-relaxed">Калибровка мощи. Точный ввод значений для тонкой настройки оружия под свою хватку. Никаких приблизительных ползунков.</p>
+                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Improved Settings
+                    </h3>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Калибровка мощи. Точный ввод значений
+                        для тонкой настройки оружия под свою хватку. Никаких приблизительных ползунков.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Команды -->
-    <section id="commands" class="commands-section py-20 md:py-32 bg-gradient-to-b from-black/90 to-black/90 border-t border-b border-blood-red/30">
+    <section id="commands"
+        class="commands-section py-20 md:py-32 bg-gradient-to-b from-black/90 to-black/90 border-t border-b border-blood-red/30">
         <div class="container mx-auto px-8 relative z-10">
-            <h2 class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-16 text-center uppercase tracking-wide relative pb-8">Команды Reaper Client</h2>
-            <p class="text-lg text-center mb-16 max-w-3xl mx-auto">Полный список команд для настройки клиента под себя</p>
-            
+            <h2
+                class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-16 text-center uppercase tracking-wide relative pb-8">
+                Команды Reaper Client</h2>
+            <p class="text-lg text-center mb-16 max-w-3xl mx-auto">Полный список команд для настройки клиента под себя
+            </p>
+
             <div class="search-box max-w-2xl mx-auto mb-16 relative">
-                <input type="text" class="search-input w-full py-4 px-8 bg-dark-gray/70 border border-blood-red/30 rounded-full text-white font-roboto-mono text-base transition-all duration-300 focus:outline-none focus:border-blood-red focus:shadow-lg focus:shadow-blood-red/30 placeholder-white/60" placeholder="Поиск команд..." id="commandSearch">
+                <input type="text"
+                    class="search-input w-full py-4 px-8 bg-dark-gray/70 border border-blood-red/30 rounded-full text-white font-roboto-mono text-base transition-all duration-300 focus:outline-none focus:border-blood-red focus:shadow-lg focus:shadow-blood-red/30 placeholder-white/60"
+                    placeholder="Поиск команд..." id="commandSearch">
             </div>
-            
+
             <div class="category-filter flex justify-center flex-wrap gap-4 mb-12" id="categoryFilter">
-                <button class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider active:bg-blood-red active:text-black active:shadow-lg active:shadow-blood-red/50 hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50" data-category="all">Все</button>
-                <button class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50" data-category="skin">Скины</button>
-                <button class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50" data-category="visual">Визуал</button>
-                <button class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50" data-category="gameplay">Геймплей</button>
-                <button class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50" data-category="debug">Отладка</button>
+                <button
+                    class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider active:bg-blood-red active:text-black active:shadow-lg active:shadow-blood-red/50 hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50"
+                    data-category="all">Все</button>
+                <button
+                    class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50"
+                    data-category="skin">Скины</button>
+                <button
+                    class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50"
+                    data-category="visual">Визуал</button>
+                <button
+                    class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50"
+                    data-category="gameplay">Геймплей</button>
+                <button
+                    class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50"
+                    data-category="debug">Отладка</button>
             </div>
-            
+
             <div class="commands-grid grid grid-cols-1 lg:grid-cols-2 gap-8" id="commandsGrid">
-                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40" data-categories="skin">
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="skin">
                     <div class="command-header flex justify-between items-center mb-6 relative z-10">
-                        <h3 class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">steal_skin</h3>
-                        <span class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Скины</span>
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            steal_skin</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Скины</span>
                     </div>
-                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Копирует скин указанного игрока.</p>
-                    <div class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">steal_skin [никнейм]</div>
-                    <div class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
-                        steal_skin PlayerName <span class="comment text-green-700">// Копирует скин игрока PlayerName</span>
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Копирует скин
+                        указанного игрока.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        steal_skin [никнейм]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                        steal_skin PlayerName <span class="comment text-green-700">// Копирует скин игрока
+                            PlayerName</span>
                     </div>
                 </div>
-                
-                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40" data-categories="skin">
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="skin">
                     <div class="command-header flex justify-between items-center mb-6 relative z-10">
-                        <h3 class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">steal_clan</h3>
-                        <span class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Скины</span>
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            steal_clan</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Скины</span>
                     </div>
-                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Копирует клан указанного игрока.</p>
-                    <div class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">steal_clan [никнейм]</div>
-                    <div class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
-                        steal_clan PlayerName <span class="comment text-green-700">// Копирует клан игрока PlayerName</span>
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Копирует клан
+                        указанного игрока.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        steal_clan [никнейм]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                        steal_clan PlayerName <span class="comment text-green-700">// Копирует клан игрока
+                            PlayerName</span>
                     </div>
                 </div>
-                
-                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40" data-categories="visual">
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="visual">
                     <div class="command-header flex justify-between items-center mb-6 relative z-10">
-                        <h3 class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">cl_hide_chat_bubbles</h3>
-                        <span class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Визуал</span>
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            cl_hide_chat_bubbles</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Визуал</span>
                     </div>
-                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Скрывает облачка чата над вами.</p>
-                    <div class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">cl_hide_chat_bubbles [0|1]</div>
-                    <div class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
-                        cl_hide_chat_bubbles 1 <span class="comment text-green-700">// Включает скрытие облачков чата</span>
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Скрывает облачка чата
+                        над вами.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        cl_hide_chat_bubbles [0|1]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                        cl_hide_chat_bubbles 1 <span class="comment text-green-700">// Включает скрытие облачков
+                            чата</span>
                     </div>
                 </div>
-                
-                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40" data-categories="gameplay">
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="gameplay">
                     <div class="command-header flex justify-between items-center mb-6 relative z-10">
-                        <h3 class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">fast_input</h3>
-                        <span class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Геймплей</span>
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            fast_input</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Геймплей</span>
                     </div>
-                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Активирует систему уменьшения визуальной задержки ввода для максимальной отзывчивости.</p>
-                    <div class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">cl_fast_input [0|1]</div>
-                    <div class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Активирует систему
+                        уменьшения визуальной задержки ввода для максимальной отзывчивости.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        cl_fast_input [0|1]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
                         cl_fast_input 1 <span class="comment text-green-700">// Включает быстрый ввод</span>
                     </div>
                 </div>
-                
-                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40" data-categories="debug">
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="debug">
                     <div class="command-header flex justify-between items-center mb-6 relative z-10">
-                        <h3 class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">cl_mini_debug</h3>
-                        <span class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Отладка</span>
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            cl_mini_debug</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Отладка</span>
                     </div>
-                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Включает компактный режим отладки для анализа игровых процессов.</p>
-                    <div class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">cl_mini_debug [0|1]</div>
-                    <div class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Включает компактный
+                        режим отладки для анализа игровых процессов.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        cl_mini_debug [0|1]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
                         mini_debug 1 <span class="comment text-green-700">// Включает мини-дебаг</span>
                     </div>
                 </div>
-                
-                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40" data-categories="debug">
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="debug">
                     <div class="command-header flex justify-between items-center mb-6 relative z-10">
-                        <h3 class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">player_dump</h3>
-                        <span class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Отладка</span>
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            player_dump</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Отладка</span>
                     </div>
-                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Выводит информацию обо всех игроках на сервере.</p>
-                    <div class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">player_dump</div>
-                    <div class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Выводит информацию обо
+                        всех игроках на сервере.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        player_dump</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
                         player_dump <span class="comment text-green-700">// Показывает информацию об игроках</span>
                     </div>
                 </div>
@@ -358,18 +483,26 @@
     </section>
 
     <!-- Ченджлог -->
-    <section id="changelog" class="changelog-section py-20 md:py-32 bg-gradient-to-b from-black/90 to-black/90 border-t border-b border-blood-red/30 relative">
+    <section id="changelog"
+        class="changelog-section py-20 md:py-32 bg-gradient-to-b from-black/90 to-black/90 border-t border-b border-blood-red/30 relative">
         <div class="container mx-auto px-8 relative z-10">
-            <h2 class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-16 text-center uppercase tracking-wide relative pb-8">История обновлений</h2>
-            
-            <div class="changelog-item mb-16 pb-12 border-b border-blood-red/30 relative last:border-b-0 last:mb-0 last:pb-0">
-                <span class="version inline-block py-2 px-6 bg-gradient-to-r from-blood-red to-accent-red text-black text-base font-bold mb-4 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/50">v0.9.0</span>
+            <h2
+                class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-16 text-center uppercase tracking-wide relative pb-8">
+                История обновлений</h2>
+
+            <div
+                class="changelog-item mb-16 pb-12 border-b border-blood-red/30 relative last:border-b-0 last:mb-0 last:pb-0">
+                <span
+                    class="version inline-block py-2 px-6 bg-gradient-to-r from-blood-red to-accent-red text-black text-base font-bold mb-4 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/50">v0.9.0</span>
                 <span class="date text-light-blood text-base mb-6 block font-light tracking-wider">Pre-Release</span>
                 <ul class="changelog-list list-none">
-                    <li class="mb-3 relative pl-8 text-white font-light">Добавлен Skin Stealer с командой steal_skin</li>
-                    <li class="mb-3 relative pl-8 text-white font-light">Добавлена возможность кражи кланов (steal_clan)</li>
+                    <li class="mb-3 relative pl-8 text-white font-light">Добавлен Skin Stealer с командой steal_skin
+                    </li>
+                    <li class="mb-3 relative pl-8 text-white font-light">Добавлена возможность кражи кланов (steal_clan)
+                    </li>
                     <li class="mb-3 relative pl-8 text-white font-light">Реализован Player Dump</li>
-                    <li class="mb-3 relative pl-8 text-white font-light">Добавлены уведомления о выходе с тайла на панели быстрого доступа</li>
+                    <li class="mb-3 relative pl-8 text-white font-light">Добавлены уведомления о выходе с тайла на
+                        панели быстрого доступа</li>
                     <li class="mb-3 relative pl-8 text-white font-light">Реализовано скрытие облачков чата</li>
                     <li class="mb-3 relative pl-8 text-white font-light">Добавлены Old Star Particles</li>
                     <li class="mb-3 relative pl-8 text-white font-light">Интегрирован Fast Input</li>
@@ -382,32 +515,43 @@
     </section>
 
     <!-- Скачать -->
-<section id="download" class="py-20 md:py-32">
-    <div class="container mx-auto px-8 flex flex-col items-center">
-        <h2 class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-8 text-center uppercase tracking-wide relative pb-4">Загрузить</h2>
-        <p class="text-sm text-center mb-12 max-w-xl mx-auto text-gray-300 uppercase tracking-widest">Pre-Release 0.9 | Tread Carefully</p>
-        
-        <div class="w-full max-w-md">
-            <div class="download-card p-6 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40">
-                <div class="download-icon text-blood-red text-4xl mb-5 text-center relative z-10 text-shadow shadow-blood-red/50">
-                    <i class="fab fa-windows"></i>
+    <section id="download" class="py-20 md:py-32">
+        <div class="container mx-auto px-8 flex flex-col items-center">
+            <h2
+                class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-8 text-center uppercase tracking-wide relative pb-4">
+                Загрузить</h2>
+            <p class="text-sm text-center mb-12 max-w-xl mx-auto text-gray-300 uppercase tracking-widest">Pre-Release
+                0.9 | Tread Carefully</p>
+
+            <div class="w-full max-w-md">
+                <div
+                    class="download-card p-6 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40">
+                    <div
+                        class="download-icon text-blood-red text-4xl mb-5 text-center relative z-10 text-shadow shadow-blood-red/50">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3
+                        class="download-title font-orbitron text-blood-red text-lg mb-4 text-center relative z-10 uppercase tracking-wider">
+                        Windows</h3>
+                    <p
+                        class="download-description text-center mb-6 text-white font-light leading-relaxed relative z-10 text-sm opacity-80">
+                        7, 8, 10, 11</p>
+                    <a href="https://github.com/klow-8888/Reaper-Client/releases/download/Reaper.Client/Reaper.Client.7z"
+                        class="btn-hover-effect block w-full py-3 bg-transparent text-blood-red border-2 border-blood-red no-underline text-sm uppercase tracking-widest transition-all duration-400 text-center relative overflow-hidden z-10 font-orbitron text-shadow shadow-blood-red/70 shadow-lg mt-4 hover:bg-blood-red hover:text-black hover:shadow-xl hover:shadow-blood-red/70">
+                        Получить
+                    </a>
                 </div>
-                <h3 class="download-title font-orbitron text-blood-red text-lg mb-4 text-center relative z-10 uppercase tracking-wider">Windows</h3>
-                <p class="download-description text-center mb-6 text-white font-light leading-relaxed relative z-10 text-sm opacity-80">7, 8, 10, 11</p>
-                <a href="https://drive.google.com/file/d/1Lj_J6KX8Ml5iF-1V0y1ZD2WuDAmkRY5v/" class="btn-hover-effect block w-full py-3 bg-transparent text-blood-red border-2 border-blood-red no-underline text-sm uppercase tracking-widest transition-all duration-400 text-center relative overflow-hidden z-10 font-orbitron text-shadow shadow-blood-red/70 shadow-lg mt-4 hover:bg-blood-red hover:text-black hover:shadow-xl hover:shadow-blood-red/70">
-                    Получить
-                </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Футер -->
     <footer class="py-16 bg-gradient-to-b from-black/90 to-black/90 border-t border-blood-red/30 relative">
         <div class="container mx-auto px-8">
             <div class="footer-content flex flex-col md:flex-row justify-between items-center">
                 <div class="footer-logo mb-8 md:mb-0">
-                    <a href="#hero-section" class="font-cinzel text-blood-red text-2xl no-underline tracking-widest flex items-center text-shadow-lg shadow-blood-red/70">
+                    <a href="#hero-section"
+                        class="font-cinzel text-blood-red text-2xl no-underline tracking-widest flex items-center text-shadow-lg shadow-blood-red/70">
                         <i class="fas fa-skull-crossbones mr-2 text-accent-red"></i>
                         REAPER
                     </a>
@@ -421,19 +565,19 @@
 
     <script>
         // Скрипт для поиска команд
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const searchInput = document.getElementById('commandSearch');
             const commandCards = document.querySelectorAll('.command-card');
             const categoryButtons = document.querySelectorAll('.category-btn');
-            
+
             // Поиск команд
-            searchInput.addEventListener('input', function() {
+            searchInput.addEventListener('input', function () {
                 const searchTerm = this.value.toLowerCase();
-                
+
                 commandCards.forEach(card => {
                     const commandName = card.querySelector('.command-name').textContent.toLowerCase();
                     const commandDescription = card.querySelector('.command-description').textContent.toLowerCase();
-                    
+
                     if (commandName.includes(searchTerm) || commandDescription.includes(searchTerm)) {
                         card.style.display = 'block';
                     } else {
@@ -441,20 +585,20 @@
                     }
                 });
             });
-            
+
             // Фильтрация по категориям
             categoryButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const category = this.getAttribute('data-category');
-                    
+
                     // Обновляем активную кнопку
                     categoryButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
-                    
+
                     // Показываем/скрываем карточки
                     commandCards.forEach(card => {
                         const cardCategories = card.getAttribute('data-categories');
-                        
+
                         if (category === 'all' || cardCategories.includes(category)) {
                             card.style.display = 'block';
                         } else {
@@ -463,15 +607,15 @@
                     });
                 });
             });
-            
+
             // Плавная прокрутка для навигации
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
@@ -481,9 +625,9 @@
                     }
                 });
             });
-            
+
             // Изменение навбара при прокрутке
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const navbar = document.getElementById('navbar');
                 if (window.scrollY > 50) {
                     navbar.classList.add('py-4');
@@ -496,4 +640,5 @@
         });
     </script>
 </body>
+
 </html>
