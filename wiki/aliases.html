@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaper Client - Система алиасов | Teeworlds DDNet</title>
+    <meta name="description" content="Полное руководство по системе алиасов Reaper Client для Teeworlds DDNet">
+    <meta name="keywords" content="Reaper Client, алиасы, бинды, Teeworlds, DDNet">
+    <meta name="author" content="klow">
+    <meta property="og:title" content="Reaper Client - Система алиасов для Teeworlds DDNet">
+    <meta property="og:description" content="Первая и единственная система алиасов для Teeworlds DDNet">
+    <meta property="og:url" content="https://klow-8888.github.io/Reaper-Client/wiki/aliases">
+    <meta property="og:type" content="article">
+    <meta name="theme-color" content="#24292f">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://klow-8888.github.io/Reaper-Client/wiki/aliases">
+    <script>
+        // Проверяем тему ДО загрузки страницы
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            // Если в localStorage есть сохраненная тема - используем ее
+            // Иначе используем системную предпочтение
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        github: {
+                            light: {
+                                bg: '#ffffff',
+                                text: '#24292f',
+                                border: '#d0d7de',
+                                code: '#f6f8fa',
+                                header: '#f6f8fa',
+                                accent: '#0969da'
+                            },
+                            dark: {
+                                bg: '#0d1117',
+                                text: '#e6edf3',
+                                border: '#30363d',
+                                code: '#161b22',
+                                header: '#161b22',
+                                accent: '#2f81f7'
+                            }
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .markdown-body {
+            -webkit-text-size-adjust: 100%;
+            line-height: 1.5;
+            color: var(--color-fg-default);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 16px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .copy-btn {
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            opacity: 0.8;
+        }
+
+        .nav-item {
+            position: relative;
+            padding: 8px 0;
+            font-size: 14px;
+            color: rgb(101, 109, 118);
+        }
+
+        .nav-item.active {
+            font-weight: 600;
+            color: rgb(36, 41, 47);
+        }
+
+        .dark .nav-item {
+            color: rgb(158, 167, 178);
+        }
+
+        .dark .nav-item.active {
+            color: rgb(230, 237, 243);
+        }
+
+        .code-block {
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        pre {
+            margin: 0;
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: var(--tw-prose-pre-bg);
+            border-radius: 6px;
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+            font-size: 85%;
+            padding: 0.2em 0.4em;
+            margin: 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-github-light-bg text-github-light-text dark:bg-github-dark-bg dark:text-github-dark-text font-sans transition-colors duration-200">
+    <!-- Навигация -->
+    <nav
+        class="sticky top-0 z-50 bg-github-light-header/90 dark:bg-github-dark-header/90 backdrop-blur-md border-b border-github-light-border dark:border-github-dark-border">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-2 text-lg font-semibold">
+                <span class="text-github-light-accent dark:text-github-dark-accent">Reaper Client</span>
+                <span class="text-github-light-text/70 dark:text-github-dark-text/70">/ Wiki</span>
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html"
+                        class="text-sm hover:text-github-light-accent dark:hover:text-github-dark-accent transition-colors">Главная</a>
+                    <a href="installation.html"
+                        class="text-sm hover:text-github-light-accent dark:hover:text-github-dark-accent transition-colors">Установка</a>
+                    <a href="aliases.html"
+                        class="text-sm text-github-light-accent dark:text-github-dark-accent font-medium transition-colors">Алиасы</a>
+                </div>
+
+                <button id="themeSwitch"
+                    class="p-2 rounded-md bg-github-light-code dark:bg-github-dark-code border border-github-light-border dark:border-github-dark-border text-sm">
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Боковая панель -->
+            <div class="lg:w-64 flex-shrink-0">
+                <div
+                    class="sticky top-24 bg-github-light-code dark:bg-github-dark-code rounded-md border border-github-light-border dark:border-github-dark-border p-4">
+                    <h2
+                        class="text-sm font-semibold mb-3 uppercase tracking-wide text-github-light-text/70 dark:text-github-dark-text/70">
+                        Навигация</h2>
+                    <nav class="space-y-1">
+                        <a href="#features"
+                            class="nav-item block hover:text-github-light-accent dark:hover:text-github-dark-accent transition-colors">Возможности</a>
+                        <a href="#examples"
+                            class="nav-item block hover:text-github-light-accent dark:hover:text-github-dark-accent transition-colors">Примеры</a>
+                        <a href="#usage"
+                            class="nav-item block hover:text-github-light-accent dark:hover:text-github-dark-accent transition-colors">Использование</a>
+                        <a href="#unique"
+                            class="nav-item block hover:text-github-light-accent dark:hover:text-github-dark-accent transition-colors">Уникальность</a>
+                        <a href="#faq"
+                            class="nav-item block hover:text-github-light-accent dark:hover:text-github-dark-accent transition-colors">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Основной контент -->
+            <div class="flex-1 min-w-0">
+                <div class="markdown-body">
+                    <h1
+                        class="text-2xl md:text-3xl font-bold border-b border-github-light-border dark:border-github-dark-border pb-4 mb-8">
+                        Система алиасов Reaper Client</h1>
+
+                    <p class="mb-6">Reaper Client представляет первую и единственную систему алиасов для Teeworlds
+                        DDNet, которая позволяет создавать мощные бинды и улучшить ваш игровой опыт.</p>
+
+                    <!-- Возможности -->
+                    <section id="features" class="scroll-mt-24 mb-10">
+                        <h2 class="text-xl md:text-2xl font-semibold mb-4 mt-8">Возможности системы</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div
+                                class="bg-github-light-code dark:bg-github-dark-code rounded-md p-4 border border-github-light-border dark:border-github-dark-border">
+                                <h3 class="font-medium mb-2">Простота использования</h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">Создавайте
+                                    сложные бинды одной командой без редактирования множества конфигурационных файлов.
+                                </p>
+                            </div>
+
+                            <div
+                                class="bg-github-light-code dark:bg-github-dark-code rounded-md p-4 border border-github-light-border dark:border-github-dark-border">
+                                <h3 class="font-medium mb-2">Динамическое переключение</h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">Быстрое и
+                                    удобное переключение между командами и режимами.</p>
+                            </div>
+
+                            <div
+                                class="bg-github-light-code dark:bg-github-dark-code rounded-md p-4 border border-github-light-border dark:border-github-dark-border">
+                                <h3 class="font-medium mb-2">Мощные возможности</h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">Объединяйте
+                                    множественные команды в одном бинде, создавайте сложные последовательности действий.
+                                </p>
+                            </div>
+
+                            <div
+                                class="bg-github-light-code dark:bg-github-dark-code rounded-md p-4 border border-github-light-border dark:border-github-dark-border">
+                                <h3 class="font-medium mb-2">Оптимизация производительности</h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">Снижение
+                                    нагрузки на систему за счет уменьшения количества конфигурационных файлов.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Примеры -->
+                    <section id="examples" class="scroll-mt-24 mb-10">
+                        <h2 class="text-xl md:text-2xl font-semibold mb-4 mt-8">Практические примеры</h2>
+
+                        <h3 class="font-medium mb-3 mt-6">Deepfly для дамми</h3>
+                        <p class="mb-4">Создайте переключатель Deepfly режима для вашего дамми всего несколькими
+                            командами:</p>
+
+                        <div class="code-block relative mb-4">
+                            <button
+                                class="copy-btn absolute top-2 right-2 px-2 py-1 text-xs bg-github-light-border/30 dark:bg-github-dark-border/30 rounded text-github-light-text/70 dark:text-github-dark-text/70">
+                                Копировать
+                            </button>
+                            <pre
+                                class="bg-github-light-code dark:bg-github-dark-code border border-github-light-border dark:border-github-dark-border"><code>// Создаем алиасы для включения и выключения Deepfly
+alias deepfly_on "bind mouse1 \"+fire; +toggle cl_dummy_hammer 1 0\"; bind h alias_exec deepfly_off; echo Deepfly: ON"
+alias deepfly_off "bind mouse1 +fire; bind h alias_exec deepfly_on; echo Deepfly: OFF"
+
+// Устанавливаем начальное состояние
+bind h "alias_exec deepfly_off"</code></pre>
+                        </div>
+
+                        <div
+                            class="bg-blue-100 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-md p-4 mt-4">
+                            <h4 class="font-medium text-blue-800 dark:text-blue-300 mb-2">Как это работает</h4>
+                            <ul class="text-sm text-blue-700 dark:text-blue-300 list-disc list-inside space-y-1">
+                                <li>При выполнении <code>deepfly_on</code> переназначается левая кнопка мыши</li>
+                                <li>Клавиша H переназначается для выключения режима Deepfly</li>
+                                <li>При выполнении <code>deepfly_off</code> восстанавливаются стандартные настройки</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Использование -->
+                    <section id="usage" class="scroll-mt-24 mb-10">
+                        <h2 class="text-xl md:text-2xl font-semibold mb-4 mt-8">Использование алиасов</h2>
+
+                        <h3 class="font-medium mb-3 mt-6">Базовые команды</h3>
+                        <p class="mb-4">Система алиасов включает несколько простых, но мощных команд:</p>
+
+                        <div class="code-block relative mb-6">
+                            <button
+                                class="copy-btn absolute top-2 right-2 px-2 py-1 text-xs bg-github-light-border/30 dark:bg-github-dark-border/30 rounded text-github-light-text/70 dark:text-github-dark-text/70">
+                                Копировать
+                            </button>
+                            <pre
+                                class="bg-github-light-code dark:bg-github-dark-code border border-github-light-border dark:border-github-dark-border"><code>// Создание алиаса
+alias <имя> "<команда>"
+
+// Выполнение алиаса
+alias_exec <имя>
+
+// Удаление алиаса
+unalias <имя>
+
+// Просмотр всех алиасов
+list_aliases</code></pre>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div
+                                class="bg-green-100 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md p-4">
+                                <h4 class="font-medium text-green-800 dark:text-green-300 mb-2">Правильное использование
+                                </h4>
+                                <ul class="text-sm text-green-700 dark:text-green-300 list-disc list-inside space-y-1">
+                                    <li>Используйте понятные и описательные имена</li>
+                                    <li>Разделяйте сложные команды точкой с запятой</li>
+                                    <li>Добавляйте echo команды для отладки</li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class="bg-red-100 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md p-4">
+                                <h4 class="font-medium text-red-800 dark:text-red-300 mb-2">Избегайте проблем</h4>
+                                <ul class="text-sm text-red-700 dark:text-red-300 list-disc list-inside space-y-1">
+                                    <li>Не используйте слишком длинные команды</li>
+                                    <li>Избегайте конфликтующих имен алиасов</li>
+                                    <li>Не создавайте рекурсивные алиасы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Уникальность -->
+                    <section id="unique" class="scroll-mt-24 mb-10">
+                        <h2 class="text-xl md:text-2xl font-semibold mb-4 mt-8">Уникальность системы</h2>
+
+                        <p class="mb-4">Reaper Client представляет первую и единственную реализацию системы алиасов в
+                            Teeworlds DDNet. В то время как другие игроки всё еще используют устаревший метод с
+                            множеством конфигурационных файлов, вы можете наслаждаться современным и эффективным
+                            подходом.</p>
+
+                        <div
+                            class="bg-purple-100 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-md p-4 mt-4">
+                            <h4 class="font-medium text-purple-800 dark:text-purple-300 mb-2">Преимущества перед
+                                традиционными методами</h4>
+                            <ul class="text-sm text-purple-700 dark:text-purple-300 list-disc list-inside space-y-1">
+                                <li>Мгновенное переключение между режимами</li>
+                                <li>Упрощение управления конфигурациями</li>
+                                <li>Сокращение количества файлов конфигурации</li>
+                                <li>Возможность создания сложных цепочек команд</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- FAQ -->
+                    <section id="faq" class="scroll-mt-24 mb-10">
+                        <h2 class="text-xl md:text-2xl font-semibold mb-4 mt-8">Частые вопросы (FAQ)</h2>
+
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="font-medium mb-1">Сколько алиасов я могу создать?</h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">Система
+                                    поддерживает до 64 алиасов одновременно. Если вам нужно больше, рекомендуется
+                                    объединять похожие команды.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-medium mb-1">Можно ли использовать алиасы в других клиентах Teeworlds?
+                                </h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">Нет, система
+                                    алиасов является эксклюзивной функцией Reaper Client и недоступна в других клиентах.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-medium mb-1">Что делать, если алиас не работает?</h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">1. Проверьте
+                                    правильность синтаксиса. 2. Убедитесь, что имя алиаса не конфликтует. 3. Проверьте,
+                                    нет ли рекурсивных вызовов.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-medium mb-1">Сохраняются ли алиасы между сессиями?</h3>
+                                <p class="text-sm text-github-light-text/80 dark:text-github-dark-text/80">Нет, алиасы
+                                    не сохраняются после завершения работы. При следующем запуске необходимо создавать
+                                    их заново.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer
+        class="bg-github-light-code dark:bg-github-dark-code border-t border-github-light-border dark:border-github-dark-border py-8 mt-12">
+        <div class="container mx-auto px-4 text-center text-sm text-github-light-text/70 dark:text-github-dark-text/70">
+            <p>Reaper Client — первый и единственный клиент Teeworlds DDNet с системой алиасов</p>
+            <p class="mt-2">© 2025 Reaper Client Team</p>
+        </div>
+    </footer>
+
+    <script>
+        // Переключение темы
+        const themeSwitch = document.getElementById('themeSwitch');
+
+        // Функция для применения темы
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Инициализация темы при загрузке
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            // Если тема не сохранена, используем системную
+            if (!savedTheme) {
+                applyTheme(prefersDark ? 'dark' : 'light');
+            }
+        });
+
+        // Обработчик клика по переключателю
+        themeSwitch.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+            applyTheme(isDark ? 'light' : 'dark');
+        });
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Функция копирования кода
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const codeBlock = this.parentElement.querySelector('code');
+                const textArea = document.createElement('textarea');
+                textArea.value = codeBlock.textContent;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+
+                // Визуальное подтверждение копирования
+                const originalText = this.textContent;
+                this.textContent = 'Скопировано!';
+
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>

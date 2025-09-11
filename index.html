@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reaper Client - Best aggressive client for DDNet</title>
-    <meta name="description" content="Reaper Client - мощный клиент для DDNet с функциями Skin Stealer, Player Dump, Fast Input и другими. Преврати игру в оружие.">
-    <meta name="keywords" content="Reaper Client, reaper, Reaper, DDNet, клиент, teeworld, skin stealer, player dump, fast input">
-    
+    <meta name="description"
+        content="Reaper Client - мощный клиент для DDNet с функциями Skin Stealer, Player Dump, Fast Input и другими. Преврати игру в оружие.">
+    <meta name="keywords"
+        content="Reaper Client, reaper, Reaper, DDNet, клиент, teeworld, skin stealer, player dump, fast input">
+
     <meta name="author" content="klow">
     <meta property="og:title" content="Reaper Client - Доминируй в DDNet">
-    <meta property="og:description" content="Мощный, агрессивный и непревзойденный клиент для DDNet. Получи преимущество с самым продвинутым клиентом.">
+    <meta property="og:description"
+        content="Мощный, агрессивный и непревзойденный клиент для DDNet. Получи преимущество с самым продвинутым клиентом.">
     <meta property="og:url" content="https://klow-8888.github.io/Reaper-Client/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Reaper Client">
 
     <meta name="twitter:title" content="Reaper Client - Доминируй в DDNet">
-    <meta name="twitter:description" content="Мощный, агрессивный и непревзойденный клиент для DDNet. Получи преимущество с самым продвинутым клиентом.">
+    <meta name="twitter:description"
+        content="Мощный, агрессивный и непревзойденный клиент для DDNet. Получи преимущество с самым продвинутым клиентом.">
 
     <meta name="theme-color" content="#8A0303">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://klow-8888.github.io/Reaper-Client/">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -174,6 +178,32 @@
             transform: translateY(-50%);
             text-shadow: 0 0 5px rgba(138, 3, 3, 0.5);
         }
+
+        .wiki-btn {
+            box-shadow: 0 0 15px rgba(138, 3, 3, 0.4);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .wiki-btn:hover {
+            box-shadow: 0 0 25px rgba(138, 3, 3, 0.6);
+        }
+
+        /* Анимация пульсирующей точки */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
     </style>
 </head>
 
@@ -187,7 +217,7 @@
                 <i class="fas fa-skull-crossbones mr-2 text-accent-red"></i>
                 REAPER
             </a>
-            <div class="flex gap-6 md:gap-10">
+            <div class="flex items-center gap-6 md:gap-10">
                 <a href="#features"
                     class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Возможности</a>
                 <a href="#commands"
@@ -196,6 +226,15 @@
                     class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Обновления</a>
                 <a href="#download"
                     class="nav-link text-white no-underline text-sm uppercase tracking-wider transition-all duration-300 relative font-orbitron font-normal hover:text-blood-red">Скачать</a>
+
+                <!-- Кнопка Wiki -->
+                <a href="wiki/index.html" target="_blank"
+                    class="wiki-btn group relative px-4 py-2 bg-gradient-to-r from-blood-red to-accent-red text-black no-underline text-sm uppercase tracking-wider rounded-full transition-all duration-300 font-orbitron font-bold hover:from-accent-red hover:to-blood-red hover:shadow-lg hover:shadow-blood-red/50 transform hover:scale-105">
+                    <span class="relative z-10">WIKI</span>
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-accent-red to-blood-red opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></span>
+                    <span class="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                </a>
             </div>
         </div>
     </nav>
@@ -209,7 +248,7 @@
                 REAPER CLIENT</h1>
             <div
                 class="version-badge inline-block px-6 py-2 bg-gradient-to-r from-blood-red to-accent-red text-black text-base font-bold mb-6 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/50 animate-fadeIn">
-                Pre-Release 0.9</div>
+                Release 1.0</div>
             <p
                 class="hero-subtitle font-orbitron text-white text-xl md:text-2xl mb-10 font-light tracking-widest animate-fadeIn animation-delay-500">
                 THE ABYSS GAZES BACK - Nietzsche.</p>
@@ -244,6 +283,18 @@
                 </div>
 
                 <div
+                    class="featureItem p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
+                    <div
+                        class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Aliases System
+                    </h3>
+                    <p class="relative z-10 text-white font-light leading-relaxed">Революционная система алиасов.
+                        Создавай собственные команды и макросы для мгновенного доступа к функционалу.</p>
+                </div>
+
+                <div
                     class="feature-item p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-400 relative overflow-hidden shadow-lg hover:-translate-y-2 hover:border-blood-red hover:shadow-xl hover:shadow-black/40">
                     <div
                         class="feature-icon text-blood-red text-4xl mb-7 relative z-10 text-shadow shadow-blood-red/50">
@@ -251,7 +302,7 @@
                     </div>
                     <h3 class="feature-title font-orbitron text-blood-red text-xl mb-6 relative z-10">Player Dump</h3>
                     <p class="relative z-10 text-white font-light leading-relaxed">Полная разведка сервера. Получай всю
-                        информацию о цели: ID, имя, клан, пинг — всё для тотального доминирования.</p>
+                        информацию о цели: ID, имя, клан — всё для тотального доминирования.</p>
                 </div>
 
                 <div
@@ -369,6 +420,9 @@
                     data-category="gameplay">Геймплей</button>
                 <button
                     class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50"
+                    data-category="alias">Алиасы</button>
+                <button
+                    class="category-btn py-3 px-6 bg-transparent border border-blood-red/30 rounded-full text-white cursor-pointer transition-all duration-300 font-orbitron text-sm uppercase tracking-wider hover:bg-blood-red hover:text-black hover:shadow-lg hover:shadow-blood-red/50"
                     data-category="debug">Отладка</button>
             </div>
 
@@ -456,6 +510,89 @@
                     </div>
                 </div>
 
+                <!-- Команды системы алиасов -->
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="alias">
+                    <div class="command-header flex justify-between items-center mb-6 relative z-10">
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            alias</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Алиасы</span>
+                    </div>
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Создает новый алиас
+                        (псевдоним команды).</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        alias [имя] [команда]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                        alias say_hi "say hello!" <span class="comment text-green-700">// Создает алиас say_hi с
+                            командой "say hello"</span>
+                    </div>
+                </div>
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="alias">
+                    <div class="command-header flex justify-between items-center mb-6 relative z-10">
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            unalias</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Алиасы</span>
+                    </div>
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Удаляет существующий
+                        алиас.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        unalias [имя]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                        unalias say_hi <span class="comment text-green-700">// Удаляет алиас say_hi</span>
+                    </div>
+                </div>
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="alias">
+                    <div class="command-header flex justify-between items-center mb-6 relative z-10">
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            list_aliases</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Алиасы</span>
+                    </div>
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Показывает список всех
+                        созданных алиасов.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        list_aliases</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                        list_aliases <span class="comment text-green-700">// Показывает все алиасы</span>
+                    </div>
+                </div>
+
+                <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
+                    data-categories="alias">
+                    <div class="command-header flex justify-between items-center mb-6 relative z-10">
+                        <h3
+                            class="command-name font-roboto-mono text-accent-red text-xl text-shadow shadow-blood-red/50">
+                            alias_exec</h3>
+                        <span
+                            class="command-category py-1 px-3 bg-blood-red/20 rounded text-light-blood text-sm">Алиасы</span>
+                    </div>
+                    <p class="command-description mb-6 text-white relative z-10 leading-relaxed">Выполняет команду
+                        алиаса с дополнительными аргументами.</p>
+                    <div
+                        class="command-syntax bg-dark-gray/70 p-4 rounded mb-4 font-roboto-mono text-light-blood text-sm relative z-10 border-l-4 border-blood-red">
+                        alias_exec [алиас]</div>
+                    <div
+                        class="command-example bg-dark-gray/70 p-4 rounded font-roboto-mono text-white text-sm relative z-10 border-l-4 border-light-blood">
+                        alias_exec say_hi <span class="comment text-green-700">// Выполняет алиас say_hi</span>
+                    </div>
+                </div>
+
+
                 <div class="command-card p-8 bg-gradient-to-br from-dark-gray/80 to-black/80 border border-blood-red/30 rounded-lg transition-all duration-300 relative overflow-hidden hover:-translate-y-1 hover:border-blood-red hover:shadow-lg hover:shadow-black/40"
                     data-categories="debug">
                     <div class="command-header flex justify-between items-center mb-6 relative z-10">
@@ -507,10 +644,32 @@
                 class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-16 text-center uppercase tracking-wide relative pb-8">
                 История обновлений</h2>
 
+            <!-- Версия 1.0 -->
+            <div class="changelog-item mb-16 pb-12 border-b border-blood-red/30 relative">
+                <span
+                    class="version inline-block py-2 px-6 bg-gradient-to-r from-blood-red to-accent-red text-black text-base font-bold mb-4 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/50">v1.0</span>
+                <span class="date text-light-blood text-base mb-6 block font-light tracking-wider">Release</span>
+                <ul class="changelog-list list-none">
+                    <li class="mb-3 relative pl-8 text-white font-light">Полностью переработаны названия настроек для
+                        лучшей понятности</li>
+                    <li class="mb-3 relative pl-8 text-white font-light">Добавлен полный перевод интерфейса на русский
+                        язык</li>
+                    <li class="mb-3 relative pl-8 text-white font-light">Все функции были переписаны для повышения
+                        производительности и стабильности</li>
+                    <li class="mb-3 relative pl-8 text-white font-light">В Player Dump удалены лишние столбцы, оставлены
+                        только ID, Name и Clan</li>
+                    <li class="mb-3 relative pl-8 text-white font-light">Добавлена революционная система алиасов - <a
+                            href="wiki/aliases.html" class="text-accent-red hover:underline">подробнее в вики</a></li>
+                    <li class="mb-3 relative pl-8 text-white font-light">Добавлена вики Reaper Client - <a href="wiki/index.html"
+                            class="text-accent-red hover:underline">перейти к вики</a></li>
+                </ul>
+            </div>
+
+            <!-- Версия 0.9 (оставлена для истории) -->
             <div
                 class="changelog-item mb-16 pb-12 border-b border-blood-red/30 relative last:border-b-0 last:mb-0 last:pb-0">
                 <span
-                    class="version inline-block py-2 px-6 bg-gradient-to-r from-blood-red to-accent-red text-black text-base font-bold mb-4 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/50">v0.9.0</span>
+                    class="version inline-block py-2 px-6 bg-gradient-to-r from-blood-red/70 to-accent-red/70 text-black text-base font-bold mb-4 tracking-wider rounded-sm font-orbitron uppercase shadow-lg shadow-blood-red/30">v0.9.0</span>
                 <span class="date text-light-blood text-base mb-6 block font-light tracking-wider">Pre-Release</span>
                 <ul class="changelog-list list-none">
                     <li class="mb-3 relative pl-8 text-white font-light">Добавлен Skin Stealer с командой steal_skin
@@ -537,8 +696,8 @@
             <h2
                 class="section-title font-orbitron text-blood-red text-3xl md:text-4xl mb-8 text-center uppercase tracking-wide relative pb-4">
                 Загрузить</h2>
-            <p class="text-sm text-center mb-12 max-w-xl mx-auto text-gray-300 uppercase tracking-widest">Pre-Release
-                0.9 | Tread Carefully</p>
+            <p class="text-sm text-center mb-12 max-w-xl mx-auto text-gray-300 uppercase tracking-widest">Release
+                1.0</p>
 
             <div class="w-full max-w-md">
                 <div
@@ -553,7 +712,7 @@
                     <p
                         class="download-description text-center mb-6 text-white font-light leading-relaxed relative z-10 text-sm opacity-80">
                         7, 8, 10, 11</p>
-                    <a href="https://github.com/klow-8888/Reaper-Client/releases/download/Reaper.Client/Reaper.Client.7z"
+                    <a href="https://github.com/klow-8888/Reaper-Client/releases/download/ReaperClientRelease/Reaper_Client._11.09.2025.7z"
                         class="btn-hover-effect block w-full py-3 bg-transparent text-blood-red border-2 border-blood-red no-underline text-sm uppercase tracking-widest transition-all duration-400 text-center relative overflow-hidden z-10 font-orbitron text-shadow shadow-blood-red/70 shadow-lg mt-4 hover:bg-blood-red hover:text-black hover:shadow-xl hover:shadow-blood-red/70">
                         Получить
                     </a>
